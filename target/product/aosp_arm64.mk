@@ -53,6 +53,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulator_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/board/generic_arm64/device.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 #
 # Special settings for GSI releasing
@@ -65,7 +66,7 @@ endif
 # The Bluetooth namespace needs to be selected to include the default
 # Bluetooth implementation
 #
-PRODUCT_SOONG_NAMESPACES += packages/apps/Bluetooth
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/commonsys/packages/apps/Bluetooth
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/commonsys/system/bt/conf
 
 

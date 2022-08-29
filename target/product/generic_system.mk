@@ -32,12 +32,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PartnerBookmarksProvider \
+    Stk \
     Tag \
-
-ifneq ($(TARGET_NO_TELEPHONY), true)
-PRODUCT_PACKAGES += \
-    Stk
-endif #TARGET_NO_TELEPHONY
 
 # OTA support
 PRODUCT_PACKAGES += \
@@ -55,11 +51,6 @@ PRODUCT_PACKAGES += charger_res_images
 PRODUCT_PACKAGES += \
     cppreopts.sh \
     otapreopt_script \
-
-# Bluetooth libraries
-PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    audio.hearing_aid.default \
 
 # For ringtones that rely on forward lock encryption
 PRODUCT_PACKAGES += libfwdlockengine

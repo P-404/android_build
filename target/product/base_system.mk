@@ -50,6 +50,7 @@ PRODUCT_PACKAGES += \
     charger \
     cmd \
     com.android.adbd \
+    com.android.adservices \
     com.android.appsearch \
     com.android.conscrypt \
     com.android.extservices \
@@ -59,6 +60,7 @@ PRODUCT_PACKAGES += \
     com.android.media \
     com.android.media.swcodec \
     com.android.mediaprovider \
+    com.android.ondevicepersonalization \
     com.android.os.statsd \
     com.android.permission \
     com.android.resolv \
@@ -67,6 +69,7 @@ PRODUCT_PACKAGES += \
     com.android.sdkext \
     com.android.tethering \
     com.android.tzdata \
+    com.android.uwb \
     com.android.wifi \
     ContactsProvider \
     content \
@@ -76,8 +79,10 @@ PRODUCT_PACKAGES += \
     device_config \
     dmctl \
     dnsmasq \
+    dmesgd \
     DownloadProvider \
     dpm \
+    dump.erofs \
     dumpstate \
     dumpsys \
     DynamicSystemInstallationService \
@@ -88,6 +93,7 @@ PRODUCT_PACKAGES += \
     framework-minus-apex \
     framework-res \
     framework-sysconfig.xml \
+    fsck.erofs \
     fsck_msdos \
     fsverity-release-cert-der \
     fs_config_files_system \
@@ -113,7 +119,6 @@ PRODUCT_PACKAGES += \
     init_system \
     input \
     installd \
-    iorapd \
     ip \
     iptables \
     ip-up-vpn \
@@ -131,6 +136,7 @@ PRODUCT_PACKAGES += \
     libaudioeffect_jni \
     libbinder \
     libbinder_ndk \
+    libbinder_rpc_unstable \
     libc.bootstrap \
     libcamera2ndk \
     libcutils \
@@ -211,6 +217,7 @@ PRODUCT_PACKAGES += \
     mediaserver64 \
     mediaserverwrapper \
     mke2fs \
+    mkfs.erofs \
     monkey \
     mtpd \
     ndc \
@@ -294,7 +301,7 @@ PRODUCT_PACKAGES += \
 # HWASAN runtime for SANITIZE_TARGET=hwaddress builds
 ifneq (,$(filter hwaddress,$(SANITIZE_TARGET)))
   PRODUCT_PACKAGES += \
-   libclang_rt.hwasan-aarch64-android.bootstrap
+   libclang_rt.hwasan.bootstrap
 endif
 
 # Jacoco agent JARS to be built and installed, if any.
@@ -322,18 +329,20 @@ PRODUCT_HOST_PACKAGES += \
     atest \
     bcc \
     bit \
+    dump.erofs \
     e2fsck \
     fastboot \
     flags_health_check \
+    fsck.erofs \
     icu-data_host_i18n_apex \
     icu_tzdata.dat_host_tzdata_apex \
     idmap2 \
     incident_report \
     ld.mc \
     lpdump \
-    mdnsd \
     minigzip \
     mke2fs \
+    mkfs.erofs \
     resize2fs \
     sgdisk \
     sqlite3 \
@@ -388,7 +397,6 @@ PRODUCT_PACKAGES_DEBUG := \
     adb_keys \
     arping \
     dmuserd \
-    gdbserver \
     idlcli \
     init-debug.rc \
     iotop \
@@ -400,6 +408,7 @@ PRODUCT_PACKAGES_DEBUG := \
     profcollectd \
     profcollectctl \
     remount \
+    servicedispatcher \
     showmap \
     sqlite3 \
     ss \
